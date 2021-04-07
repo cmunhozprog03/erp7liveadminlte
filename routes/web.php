@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Models\Company;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,4 +26,5 @@ Route::get('/dashboard', function(){
     return view('admin.dashboard');
 })->middleware('auth')->name('dashboard');
 
-Route::resource('/company', 'Admin\CompanyController')->middleware('auth');
+Route::resource('admin/companies', 'Admin\CompanyController')->middleware('auth');
+Route::resource('/sectors', 'Admin\SectorController')->middleware('auth');

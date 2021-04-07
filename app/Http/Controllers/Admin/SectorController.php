@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Company;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+class SectorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::orderBy('name', 'ASC')->paginate(3);
-        return view('admin.companies.index', compact('companies'));
+        //
     }
 
     /**
